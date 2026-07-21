@@ -1,0 +1,1237 @@
+/* ==========================================================
+   GOOGLE FONT
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================================================
+   ROOT COLORS
+========================================================== */
+
+:root{
+
+    --primary:#7c3aed;
+    --primary-dark:#5b21b6;
+    --primary-light:#f4ecff;
+
+    --secondary:#9333ea;
+
+    --white:#ffffff;
+
+    --background:#f8f6ff;
+
+    --text:#232323;
+
+    --light-text:#777;
+
+    --border:#ece8ff;
+
+    --shadow:0 12px 35px rgba(124,58,237,.10);
+
+}
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+body{
+
+    background:var(--background);
+
+    color:var(--text);
+
+    line-height:1.6;
+
+}
+
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+.navbar{
+
+    width:100%;
+
+    background:white;
+
+    padding:18px 7%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 4px 20px rgba(0,0,0,.05);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+.logo i{
+
+    font-size:24px;
+
+}
+
+.nav-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.nav-btn{
+
+    padding:11px 22px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    color:var(--primary);
+
+    border:2px solid var(--primary);
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.nav-btn:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* ==========================================================
+   BACK BUTTON
+========================================================== */
+
+.page-nav{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:30px auto 10px;
+
+}
+
+.back-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 22px;
+
+    text-decoration:none;
+
+    background:white;
+
+    border-radius:12px;
+
+    color:var(--primary);
+
+    border:2px solid var(--primary);
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.back-btn:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* ==========================================================
+   DASHBOARD HEADER
+========================================================== */
+
+.dashboard-header{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:25px auto 50px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+.dashboard-left{
+
+    flex:1;
+
+}
+
+.dashboard-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+.dashboard-left h1{
+
+    font-size:46px;
+
+    margin-bottom:18px;
+
+}
+
+.dashboard-left p{
+
+    font-size:17px;
+
+    color:var(--light-text);
+
+    max-width:700px;
+
+}
+
+.primary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+    color:white;
+
+    padding:16px 34px;
+
+    border-radius:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================================
+   DASHBOARD WRAPPER
+========================================================== */
+
+.dashboard{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+/* ==========================================================
+   OVERVIEW GRID
+========================================================== */
+
+.overview-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:28px;
+
+    margin-bottom:60px;
+
+}
+
+.overview-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.overview-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.overview-icon{
+
+    width:68px;
+
+    height:68px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:26px;
+
+}
+
+.overview-icon.purple{
+
+    background:linear-gradient(135deg,#7c3aed,#9333ea);
+
+}
+
+.overview-icon.blue{
+
+    background:linear-gradient(135deg,#3b82f6,#2563eb);
+
+}
+
+.overview-icon.green{
+
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+
+}
+
+.overview-card span{
+
+    color:var(--light-text);
+
+    font-size:15px;
+
+}
+
+.overview-card h2{
+
+    margin-top:6px;
+
+    font-size:30px;
+
+}
+/* ==========================================================
+   SECTION HEADING
+========================================================== */
+
+.section-heading{
+
+    margin-bottom:40px;
+
+}
+
+.section-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.section-heading h2{
+
+    font-size:38px;
+
+    margin-bottom:12px;
+
+}
+
+.section-heading p{
+
+    color:var(--light-text);
+
+    font-size:16px;
+
+}
+
+/* ==========================================================
+   RESPONSES SECTION
+========================================================== */
+
+.responses-section{
+
+    margin-bottom:70px;
+
+}
+
+/* ==========================================================
+   RESPONSE CARD
+========================================================== */
+
+.response-card{
+
+    background:white;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    margin-bottom:35px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    border:1px solid var(--border);
+
+}
+
+.response-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* ==========================================================
+   RESPONSE HEADER
+========================================================== */
+
+.response-card-header{
+
+    padding:24px 30px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:white;
+
+}
+
+.response-number{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.response-number i{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.response-date{
+
+    font-size:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    opacity:.95;
+
+}
+
+/* ==========================================================
+   RESPONSE BODY
+========================================================== */
+
+.response-body{
+
+    padding:30px;
+
+}
+
+/* ==========================================================
+   ANSWER ITEM
+========================================================== */
+
+.answer-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    padding:22px;
+
+    margin-bottom:20px;
+
+    border-radius:18px;
+
+    background:#faf9ff;
+
+    border:1px solid #ece8ff;
+
+    transition:.3s;
+
+}
+
+.answer-item:hover{
+
+    background:white;
+
+    border-color:var(--primary);
+
+}
+
+/* ==========================================================
+   QUESTION TITLE
+========================================================== */
+
+.answer-question{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:var(--primary-dark);
+
+}
+
+.answer-question i{
+
+    color:var(--primary);
+
+}
+
+/* ==========================================================
+   ANSWER VALUE
+========================================================== */
+
+.answer-value{
+
+    font-size:17px;
+
+    color:#444;
+
+    line-height:1.8;
+
+    word-break:break-word;
+
+    padding-left:32px;
+
+}
+
+/* ==========================================================
+   MULTIPLE VALUES
+========================================================== */
+
+.answer-value ul{
+
+    margin-left:20px;
+
+}
+
+.answer-value li{
+
+    margin:6px 0;
+
+}
+
+/* ==========================================================
+   RESPONSE DIVIDER
+========================================================== */
+
+.answer-item:last-child{
+
+    margin-bottom:0;
+
+}
+/* ==========================================================
+   EMPTY STATE
+========================================================== */
+
+.empty-state{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:70px 40px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    border:2px dashed var(--border);
+
+}
+
+.empty-state i{
+
+    font-size:70px;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+.empty-state h2{
+
+    font-size:32px;
+
+    margin-bottom:15px;
+
+    color:var(--primary-dark);
+
+}
+
+.empty-state p{
+
+    font-size:17px;
+
+    color:var(--light-text);
+
+    max-width:500px;
+
+    margin:auto;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.footer{
+
+    margin-top:80px;
+
+    background:white;
+
+    border-top:1px solid var(--border);
+
+}
+
+.footer-content{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:35px 0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer h3{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:var(--primary);
+
+    margin-bottom:8px;
+
+}
+
+.footer p{
+
+    color:var(--light-text);
+
+}
+
+.footer-right{
+
+    color:#777;
+
+    font-weight:500;
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eee;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* ==========================================================
+   BUTTON ANIMATIONS
+========================================================== */
+
+.primary-btn,
+.nav-btn,
+.back-btn{
+
+    transition:.3s ease;
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 35px rgba(124,58,237,.25);
+
+}
+
+.nav-btn:hover,
+.back-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================================
+   CARD SHADOW ANIMATION
+========================================================== */
+
+.response-card,
+.overview-card{
+
+    transition:
+    transform .35s,
+    box-shadow .35s;
+
+}
+
+.response-card:hover,
+.overview-card:hover{
+
+    box-shadow:
+    0 20px 45px rgba(124,58,237,.15);
+
+}
+
+/* ==========================================================
+   ICON COLORS
+========================================================== */
+
+.fa-circle-question{
+
+    color:var(--primary);
+
+}
+
+.fa-user{
+
+    color:white;
+
+}
+
+.fa-clock{
+
+    color:white;
+
+}
+
+/* ==========================================================
+   SMOOTH APPEAR ANIMATION
+========================================================== */
+
+.response-card{
+
+    animation:fadeUp .6s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================================
+   RESPONSIVE DESIGN
+========================================================== */
+
+@media(max-width:1200px){
+
+    .dashboard-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:30px;
+
+    }
+
+    .dashboard-right{
+
+        width:100%;
+
+    }
+
+    .primary-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media(max-width:900px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:18px;
+
+        padding:20px;
+
+    }
+
+    .nav-buttons{
+
+        width:100%;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+    }
+
+    .overview-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .response-card-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+    .footer-content{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+    body{
+
+        overflow-x:hidden;
+
+    }
+
+    .dashboard-header{
+
+        margin:20px auto 40px;
+
+    }
+
+    .dashboard-left h1{
+
+        font-size:34px;
+
+        line-height:1.3;
+
+    }
+
+    .dashboard-left p{
+
+        font-size:15px;
+
+    }
+
+    .section-heading h2{
+
+        font-size:30px;
+
+    }
+
+    .section-heading p{
+
+        font-size:15px;
+
+    }
+
+    .response-body{
+
+        padding:20px;
+
+    }
+
+    .answer-item{
+
+        padding:18px;
+
+    }
+
+    .answer-question{
+
+        font-size:15px;
+
+    }
+
+    .answer-value{
+
+        font-size:15px;
+
+        padding-left:0;
+
+    }
+
+    .response-number{
+
+        font-size:16px;
+
+    }
+
+    .response-date{
+
+        font-size:13px;
+
+    }
+
+}
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media(max-width:500px){
+
+    .navbar{
+
+        padding:18px 15px;
+
+    }
+
+    .logo{
+
+        font-size:18px;
+
+    }
+
+    .nav-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+        text-align:center;
+
+    }
+
+    .page-nav{
+
+        width:94%;
+
+    }
+
+    .dashboard{
+
+        width:94%;
+
+    }
+
+    .dashboard-header{
+
+        width:94%;
+
+    }
+
+    .dashboard-left h1{
+
+        font-size:28px;
+
+    }
+
+    .dashboard-badge{
+
+        font-size:13px;
+
+        padding:8px 18px;
+
+    }
+
+    .overview-card{
+
+        padding:22px;
+
+    }
+
+    .overview-icon{
+
+        width:55px;
+
+        height:55px;
+
+        font-size:22px;
+
+    }
+
+    .overview-card h2{
+
+        font-size:24px;
+
+    }
+
+    .section-heading h2{
+
+        font-size:26px;
+
+    }
+
+    .response-card{
+
+        border-radius:18px;
+
+    }
+
+    .response-card-header{
+
+        padding:18px;
+
+    }
+
+    .response-body{
+
+        padding:18px;
+
+    }
+
+    .answer-item{
+
+        padding:15px;
+
+    }
+
+    .primary-btn{
+
+        padding:14px;
+
+    }
+
+}
+
+/* ==========================================================
+   SELECTION
+========================================================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* ==========================================================
+   FOCUS
+========================================================== */
+
+a:focus{
+
+    outline:none;
+
+}
+
+button:focus{
+
+    outline:none;
+
+}
+
+/* ==========================================================
+   FINAL POLISH
+========================================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
