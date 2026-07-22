@@ -1,0 +1,1651 @@
+/* =========================================
+   GOOGLE FONT
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background: #f5f7fc;
+
+    color: #222;
+
+    overflow-x: hidden;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+
+    --primary: #7c3aed;
+
+    --primary-dark: #6d28d9;
+
+    --secondary: #8b5cf6;
+
+    --light: #ffffff;
+
+    --background: #f5f7fc;
+
+    --border: #e7e9f3;
+
+    --text: #222;
+
+    --muted: #666;
+
+    --success: #16a34a;
+
+    --danger: #ef4444;
+
+    --shadow: 0 15px 40px rgba(0, 0, 0, .08);
+
+    --radius: 20px;
+
+}
+
+
+/* =========================================
+   LINKS
+========================================= */
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+button {
+
+    border: none;
+
+    outline: none;
+
+    cursor: pointer;
+
+    font-family: 'Poppins', sans-serif;
+
+    transition: .3s;
+
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+input,
+textarea,
+select {
+
+    width: 100%;
+
+    padding: 14px 18px;
+
+    border: 2px solid var(--border);
+
+    border-radius: 14px;
+
+    background: #fff;
+
+    font-size: 15px;
+
+    font-family: 'Poppins', sans-serif;
+
+    transition: .3s;
+
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 4px rgba(124, 58, 237, .12);
+
+    outline: none;
+
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.builder {
+
+    width: 92%;
+
+    max-width: 1450px;
+
+    margin: 40px auto;
+
+}
+
+
+/* =========================================
+   SECTION TITLES
+========================================= */
+
+.section-header h2 {
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    color: #222;
+
+}
+
+.section-header p {
+
+    margin-top: 8px;
+
+    color: #666;
+
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    width: 100%;
+
+    background: #fff;
+
+    padding: 18px 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .05);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: var(--primary);
+
+}
+
+.logo i {
+
+    font-size: 26px;
+
+}
+
+.nav-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+/* =========================================
+   NAV BUTTONS
+========================================= */
+
+.nav-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 22px;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.nav-btn i {
+
+    font-size: 15px;
+
+}
+
+.nav-btn.secondary {
+
+    color: var(--primary);
+
+    background: #f4efff;
+
+}
+
+.nav-btn.secondary:hover {
+
+    background: #ece2ff;
+
+}
+
+.nav-btn.primary {
+
+    color: #fff;
+
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+
+    box-shadow: 0 12px 25px rgba(124, 58, 237, .25);
+
+}
+
+.nav-btn.primary:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 18px 35px rgba(124, 58, 237, .35);
+
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.page-nav {
+
+    width: 92%;
+
+    max-width: 1450px;
+
+    margin: 30px auto 10px;
+
+}
+
+.back-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 20px;
+
+    background: #fff;
+
+    color: var(--primary);
+
+    border-radius: 12px;
+
+    border: 1px solid var(--border);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+
+    transition: .3s;
+
+    font-weight: 600;
+
+}
+
+.back-btn:hover {
+
+    background: var(--primary);
+
+    color: #fff;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    width: 92%;
+
+    max-width: 1450px;
+
+    margin: 25px auto 40px;
+
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+
+    color: #fff;
+
+    border-radius: 30px;
+
+    padding: 60px;
+
+    box-shadow: 0 20px 45px rgba(124, 58, 237, .28);
+
+}
+
+.hero-tag {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, .18);
+
+    backdrop-filter: blur(8px);
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+
+}
+
+.hero h1 {
+
+    font-size: 46px;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+
+}
+
+.hero p {
+
+    max-width: 700px;
+
+    font-size: 17px;
+
+    opacity: .95;
+
+    line-height: 1.8;
+
+}
+
+/* =========================================
+   MAIN BUILDER LAYOUT
+========================================= */
+
+.builder {
+
+    width: 92%;
+    max-width: 1450px;
+    margin: 40px auto 70px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 35px;
+
+    align-items: start;
+
+}
+
+
+/* =========================================
+   LEFT PANEL
+========================================= */
+
+.editor {
+
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+}
+
+
+/* =========================================
+   CARD DESIGN
+========================================= */
+
+.editor-card,
+.question-card {
+
+    background: #fff;
+
+    border-radius: 22px;
+
+    padding: 32px;
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.card-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 28px;
+
+}
+
+.card-title i {
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+
+    color: #fff;
+
+    font-size: 18px;
+
+}
+
+.card-title h2 {
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    color: #222;
+
+}
+
+
+/* =========================================
+   INPUT GROUPS
+========================================= */
+
+.input-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+}
+
+.input-group label {
+
+    font-weight: 600;
+
+    color: #444;
+
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+textarea {
+
+    resize: vertical;
+
+    min-height: 120px;
+
+}
+
+
+/* =========================================
+   QUESTIONS WRAPPER
+========================================= */
+
+.questions-wrapper {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+
+    color: #222;
+
+}
+
+.section-title i {
+
+    color: var(--primary);
+
+}
+
+
+/* =========================================
+   QUESTION CARD
+========================================= */
+
+.question-card {
+
+    position: relative;
+
+    transition: .35s;
+
+}
+
+.question-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 22px 45px rgba(0, 0, 0, .10);
+
+}
+
+
+/* =========================================
+   QUESTION HEADER
+========================================= */
+
+.question-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+}
+
+.question-left {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+.question-badge {
+
+    display: inline-block;
+
+    width: max-content;
+
+    padding: 7px 16px;
+
+    background: #f2ebff;
+
+    color: var(--primary);
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+.question-left h3 {
+
+    font-size: 24px;
+
+    color: #222;
+
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.question-right {
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+.icon-btn {
+
+    width: 46px;
+
+    height: 46px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.duplicate-btn {
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+
+}
+
+.duplicate-btn:hover {
+
+    background: #4f46e5;
+
+    color: #fff;
+
+}
+
+.delete-btn {
+
+    background: #fef2f2;
+
+    color: #ef4444;
+
+}
+
+.delete-btn:hover {
+
+    background: #ef4444;
+
+    color: #fff;
+
+}
+
+
+/* =========================================
+   QUESTION BODY
+========================================= */
+
+.question-body {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+
+/* =========================================
+   TWO COLUMN GRID
+========================================= */
+
+.question-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 220px;
+
+    gap: 25px;
+
+}
+
+/* =========================================
+   REQUIRED TOGGLE
+========================================= */
+
+.switch {
+
+    position: relative;
+
+    display: inline-block;
+
+    width: 62px;
+
+    height: 34px;
+
+}
+
+.switch input {
+
+    opacity: 0;
+
+    width: 0;
+
+    height: 0;
+
+}
+
+.slider {
+
+    position: absolute;
+
+    inset: 0;
+
+    cursor: pointer;
+
+    background: #d7d9e4;
+
+    border-radius: 50px;
+
+    transition: .35s;
+
+}
+
+.slider:before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 26px;
+
+    height: 26px;
+
+    left: 4px;
+
+    top: 4px;
+
+    background: #fff;
+
+    border-radius: 50%;
+
+    transition: .35s;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .18);
+
+}
+
+.switch input:checked+.slider {
+
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+
+}
+
+.switch input:checked+.slider:before {
+
+    transform: translateX(28px);
+
+}
+
+
+/* =========================================
+   OPTIONS SECTION
+========================================= */
+
+.options-section {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+.options-section label {
+
+    font-weight: 600;
+
+    color: #444;
+
+}
+
+
+/* =========================================
+   OPTION ROW
+========================================= */
+
+.option-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+.option-item input {
+
+    flex: 1;
+
+}
+
+
+/* =========================================
+   REMOVE OPTION BUTTON
+========================================= */
+
+.small-delete {
+
+    width: 44px;
+
+    height: 44px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #fef2f2;
+
+    color: #ef4444;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.small-delete:hover {
+
+    background: #ef4444;
+
+    color: #fff;
+
+    transform: scale(1.05);
+
+}
+
+
+/* =========================================
+   ADD OPTION BUTTON
+========================================= */
+
+.add-option-btn {
+
+    align-self: flex-start;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 22px;
+
+    background: #f4efff;
+
+    color: #7c3aed;
+
+    border: none;
+
+    border-radius: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.add-option-btn:hover {
+
+    background: #7c3aed;
+
+    color: #fff;
+
+}
+
+
+/* =========================================
+   ADD QUESTION SECTION
+========================================= */
+
+.add-question-section {
+
+    margin-top: 15px;
+
+}
+
+.add-question-card {
+
+    background: #fff;
+
+    border: 2px dashed #cdb9ff;
+
+    border-radius: 24px;
+
+    padding: 45px;
+
+    text-align: center;
+
+    transition: .35s;
+
+}
+
+.add-question-card:hover {
+
+    border-color: #7c3aed;
+
+    background: #faf8ff;
+
+}
+
+
+/* =========================================
+   ADD ICON
+========================================= */
+
+.add-icon {
+
+    width: 90px;
+
+    height: 90px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+
+    color: #fff;
+
+    font-size: 34px;
+
+    margin-bottom: 22px;
+
+}
+
+
+/* =========================================
+   ADD QUESTION TEXT
+========================================= */
+
+.add-question-card h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+
+    color: #222;
+
+}
+
+.add-question-card p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #666;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================
+   ADD QUESTION BUTTON
+========================================= */
+
+.add-question-btn {
+
+    margin-top: 30px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 34px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+
+    color: #fff;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .35s;
+
+    box-shadow: 0 15px 30px rgba(124, 58, 237, .25);
+
+}
+
+.add-question-btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 22px 40px rgba(124, 58, 237, .35);
+
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+    position: sticky;
+
+    top: 110px;
+
+}
+
+
+/* =========================================
+   SIDEBAR CARD
+========================================= */
+
+.sidebar-card {
+
+    background: #fff;
+
+    border-radius: 22px;
+
+    padding: 28px;
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+/* =========================================
+   MINI PREVIEW
+========================================= */
+
+.mini-preview {
+
+    margin-top: 20px;
+
+}
+
+.mini-preview h3 {
+
+    font-size: 22px;
+
+    margin-bottom: 8px;
+
+    color: #222;
+
+}
+
+.mini-preview p {
+
+    color: #666;
+
+    margin-bottom: 20px;
+
+}
+
+.mini-preview hr {
+
+    border: none;
+
+    height: 1px;
+
+    background: #ececec;
+
+    margin: 20px 0;
+
+}
+
+.preview-question {
+
+    margin-bottom: 18px;
+
+}
+
+.preview-question strong {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #333;
+
+    font-size: 15px;
+
+}
+
+.preview-question input {
+
+    background: #fafafa;
+
+}
+
+
+/* =========================================
+   QUICK ACTION BUTTONS
+========================================= */
+
+.action-btn {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 14px 18px;
+
+    margin-bottom: 12px;
+
+    background: #f8f9fd;
+
+    border-radius: 14px;
+
+    transition: .3s;
+
+    color: #444;
+
+    font-weight: 500;
+
+}
+
+.action-btn:last-child {
+
+    margin-bottom: 0;
+
+}
+
+.action-btn i {
+
+    color: var(--primary);
+
+    width: 20px;
+
+    text-align: center;
+
+    font-size: 17px;
+
+}
+
+.action-btn:hover {
+
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+
+    color: #fff;
+
+    transform: translateX(4px);
+
+}
+
+.action-btn:hover i {
+
+    color: #fff;
+
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.stat-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #f0f0f0;
+
+}
+
+.stat-row:last-child {
+
+    border-bottom: none;
+
+}
+
+.stat-row span {
+
+    color: #666;
+
+}
+
+.stat-row strong {
+
+    color: var(--primary);
+
+    font-size: 18px;
+
+}
+
+
+/* =========================================
+   AI SUGGESTIONS
+========================================= */
+
+.tips-list {
+
+    list-style: none;
+
+    margin-top: 10px;
+
+}
+
+.tips-list li {
+
+    position: relative;
+
+    padding-left: 28px;
+
+    margin-bottom: 16px;
+
+    color: #555;
+
+    line-height: 1.7;
+
+}
+
+.tips-list li::before {
+
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #7c3aed;
+
+    color: #fff;
+
+    font-size: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.sidebar-card:hover {
+
+    transform: translateY(-4px);
+
+    transition: .3s;
+
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media(max-width:1200px) {
+
+    .builder {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .sidebar {
+
+        position: static;
+
+        order: -1;
+
+    }
+
+}
+
+
+@media(max-width:900px) {
+
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 18px;
+
+        padding: 18px;
+
+    }
+
+    .nav-right {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+    }
+
+    .hero {
+
+        padding: 50px 25px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 38px;
+
+    }
+
+    .hero p {
+
+        font-size: 16px;
+
+    }
+
+    .editor-card,
+
+    .question-card,
+
+    .sidebar-card {
+
+        padding: 24px;
+
+    }
+
+    .question-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media(max-width:600px) {
+
+    body {
+
+        font-size: 15px;
+
+    }
+
+    .page-nav {
+
+        width: 95%;
+
+    }
+
+    .builder {
+
+        width: 95%;
+
+    }
+
+    .hero {
+
+        width: 95%;
+
+    }
+
+    .hero h1 {
+
+        font-size: 30px;
+
+    }
+
+    .hero p {
+
+        font-size: 15px;
+
+    }
+
+    .question-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 16px;
+
+    }
+
+    .question-right {
+
+        width: 100%;
+
+        justify-content: flex-end;
+
+    }
+
+    .option-item {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+    .small-delete {
+
+        width: 100%;
+
+    }
+
+    .nav-btn {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+    .add-question-btn {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+    .action-btn {
+
+        justify-content: center;
+
+    }
+
+}
+
+
+/* =========================================
+   SMOOTH ANIMATIONS
+========================================= */
+
+.question-card,
+
+.editor-card,
+
+.sidebar-card,
+
+.add-question-card {
+
+    animation: fadeUp .45s ease;
+
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #f3f4f8;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: linear-gradient(180deg, #7c3aed, #8b5cf6);
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #6d28d9;
+
+}
+
+
+/* =========================================
+   TEXT SELECTION
+========================================= */
+
+::selection {
+
+    background: #7c3aed;
+
+    color: #fff;
+
+}
+
+
+/* =========================================
+   INPUT AUTOFILL
+========================================= */
+
+input:-webkit-autofill,
+
+textarea:-webkit-autofill {
+
+    -webkit-box-shadow: 0 0 0 1000px #fff inset;
+
+}

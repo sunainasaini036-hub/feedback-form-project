@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Forms</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/myforms.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+            AI Form Generator
+
+        </div>
+
+        <a href="{{ url_for('home') }}" class="home-btn">
+
+            <i class="fa-solid fa-house"></i>
+
+            Home
+
+        </a>
+
+    </nav>
+    <section class="hero">
+
+        <h1>
+
+            <i class="fa-solid fa-folder-open"></i>
+
+            My Forms
+
+        </h1>
+
+        <p>
+
+            Manage all your AI generated forms from one place.
+
+        </p>
+        <!-- ========================================= -->
+        <!-- SEARCH + FILTER -->
+        <!-- ========================================= -->
+
+        <section class="toolbar">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="text" id="searchInput" placeholder="Search your forms...">
+
+            </div>
+
+            <select id="sortForms">
+
+                <option value="newest">
+
+                    Newest First
+
+                </option>
+
+                <option value="oldest">
+
+                    Oldest First
+
+                </option>
+
+                <option value="az">
+
+                    A → Z
+
+                </option>
+
+                <option value="za">
+
+                    Z → A
+
+                </option>
+
+            </select>
+
+        </section>
+
+    </section>
+
+    <div class="forms-container">
+
+        {% if forms %}
+
+        {% for form in forms %}
+
+        <div class="form-card" data-title="{{ form.title|lower }}" data-date="{{ form.created_at }}">
+
+            <div class="card-header">
+
+                <div class="form-icon">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </div>
+
+                <div>
+
+                    <h2>{{ form.title }}</h2>
+
+                    <p>{{ form.description }}</p>
+
+                </div>
+
+            </div>
+
+            <div class="card-info">
+
+                <div class="info-item">
+
+                    <span class="label">
+                        Form ID
+                    </span>
+
+                    <span class="value">
+                        {{ form.form_id }}
+                    </span>
+
+                </div>
+
+                <div class="info-item">
+
+                    <span class="label">
+                        Created
+                    </span>
+
+                    <span class="value">
+                        {{ form.created_at }}
+                    </span>
+
+                </div>
+
+                <div class="info-item">
+
+                    <span class="label">
+                        Responses
+                    </span>
+
+                    <span class="value">
+                        {{ form.responses }}
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="card-actions">
+
+                <!-- Open -->
+
+                <a href="{{ url_for('open_form', form_id=form.form_id) }}" class="btn btn-primary">
+
+                    <i class="fa-solid fa-up-right-from-square"></i>
+
+                    Open
+
+                </a>
+
+                <!-- Edit -->
+
+                <a href="{{ url_for('edit_form', form_id=form.form_id) }}" class="btn edit-btn">
+
+                    <i class="fa-solid fa-pen"></i>
+
+                    Edit
+
+                </a>
+
+                <!-- Responses -->
+
+                <a href="{{ url_for('responses', form_id=form.form_id) }}" class="btn">
+
+                    <i class="fa-solid fa-table"></i>
+
+                    Responses
+
+                </a>
+
+                <!-- Analytics -->
+
+                <a href="{{ url_for('analytics', form_id=form.form_id) }}" class="btn">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    Analytics
+
+                </a>
+
+                <!-- Delete -->
+
+                <a href="{{ url_for('delete_form_route', form_id=form.form_id) }}" class="btn delete-btn"
+                    onclick="return confirm('Delete this form permanently?')">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    Delete
+
+                </a>
+
+            </div>
+        </div>
+
+        {% endfor %}
+
+        {% else %}
+
+        <div class="empty-state">
+
+            <i class="fa-solid fa-folder-open"></i>
+
+            <h2>No Forms Found</h2>
+
+            <p>
+
+                You haven't generated any forms yet.
+
+            </p>
+
+            <a href="{{ url_for('home') }}" class="create-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Create Your First Form
+
+            </a>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+    <footer>
+
+        AI Form Generator • Powered by Gemini AI • Flask • SQLite
+
+    </footer>
+    <script>
+
+        const searchInput = document.getElementById("searchInput");
+
+        searchInput.addEventListener("keyup", function () {
+
+            const keyword = this.value.toLowerCase();
+
+            document.querySelectorAll(".form-card").forEach(card => {
+
+                const title = card.dataset.title;
+
+                card.style.display =
+                    title.includes(keyword)
+                        ? "block"
+                        : "none";
+
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>
